@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client List</title>
+</head>
+<body>
+    <h1>Clients</h1>
+    <ul>
+        {% for client in clients %}
+        <li>{{ client.name }} - {{ client.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_client' %}">Add new client</a>
+</body>
+</html>

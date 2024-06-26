@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order List</title>
+</head>
+<body>
+    <h1>Orders</h1>
+    <ul>
+        {% for order in orders %}
+        <li>Order ID: {{ order.id }}, Client: {{ order.client.name }}, Total: {{ order.total_amount }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_order' %}">Create New Order</a>
+</body>
+</html>
